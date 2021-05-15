@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import ExpenseItem from './components/ExpenseItem';
+import Expenses from './components/Expenses';
 
 function App() {
   const expenses = [
@@ -11,10 +10,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <Navbar />
-      <ExpenseItem amount = {expenses[0].amount} title = {expenses[0].title} date = {expenses[0].date} />     
-      <ExpenseItem amount = {expenses[1].amount} title = {expenses[1].title} date = {expenses[1].date} />     
-      <ExpenseItem amount = {expenses[2].amount} title = {expenses[2].title} date = {expenses[2].date} />     
+        <Expenses items = {expenses}/>
     </div>
   );
 }
